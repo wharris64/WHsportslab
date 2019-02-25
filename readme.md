@@ -19,7 +19,7 @@ Let's start building our game
 Usually, in a sports game, we want our favorite Team to win. In order to play this game, you are going to need to create teams so they can compete for the win. Below is an outline of the functionality our team component should include.
 
 * Create a stateful **Team** component that accepts a **name** and a path to a **logo** for the team as a prop
-* This component should display the team name and the logo provided as props
+* This component should display the team name and the logo provided through props
 * The Team component should also display some stats about the team.
     * It should display the number of **Shots Taken**
     * It should display the **Score** for the team
@@ -29,16 +29,16 @@ Usually, in a sports game, we want our favorite Team to win. In order to play th
 * Make sure to render and test your **Team** component functionality as you add new features.
 
 ### Setup our battle of the sports teams
-Now that we have a Default component that represents our Application being rendered to the screen and we have created and tested our **Team** component, we can start assembling our game.
+Now that we have a Default component that represents our Application and we have created our **Team** component, we can start assembling the game.
 
 * Update the default App component you created to display 2 teams, the home team and the visiting team.
 * Use your knowledge of HTML and CSS to make the page look like more like a game where two teams, home and visiting, are facing off in competition
-* Verify both teams are displayed and keep track of their stats independently
+* Verify both teams are displayed and keeping track of their stats
 
 ## Medium Mode
-Let's add some extra functionality to our sports game by adding some additional features.
+Let's add some extra functionality to our sports game.
 
-* Add functionality to make a sound play when a team shoots and a different sound when the team scores. The resources below should help accomplish this.
+* Add functionality to make a sound play when a team shoots and a different sound when a team scores. The resources below should help accomplish this.
     * https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement
     * https://www.freesoundeffects.com/free-sounds/sports-10098/
 * Let's add an additonal statistic to our teams. Let's display a **Shot Percentage** metric. This should be shots attempted divided by shots scored.
@@ -47,21 +47,20 @@ Let's add some extra functionality to our sports game by adding some additional 
 * Update your default component that is currently displaying your teams to display the **Game** component instead. And move everything the default component was displaying into the **Game** component
 * Update the **Game** component to display "Welcome to" followed by the name of the **venue** passed in as a prop.
 * Your app should still render the default component with ```ReactDOM.render()```, commonly named **App**. 
-    * The default **App** component should only display the **Game** component instead of rendering the **Team** components as before. 
+    * The default **App** component should only render the **Game** component instead of rendering the **Team** components as before. 
     * The Game component should display the venue name for the game and the **Team** components that were previously displayed in the default **App** component.
     * Each team should function as before but now conditionally display a **Shot Percentage** metric if a shot has been taken by the team.
 * Think about what would happen if we added another **Game** component to our App. We could change the **Venue** name but we can only create new games with the same teams. What could we modify in the **Game** and **Team** components to allow us to have unique teams for each game we include in our default App component?
 
 ## Hard Mode
-Hard mode is not required and is to challenge you on concepts related to state. In hard mode, we want to modify the **Game** component to be the source of the truth for the games state. The **Game** component should keep track of how the game is played and it's progress. Currently, most of this is tracked in our **Team** component. Our game component will manage 2 teams and their stats during the game. To accomplish this we will be converting our **Team** component to a stateless functional component and having the **Game** component pass the data it needs to function as props. This is concept is called [Lifting State Up](https://reactjs.org/docs/lifting-state-up.html). We are sharing state with all the components concerned by moving it up to the closest common ancestor of the components that need it.
+Hard mode is not required and is to challenge you on concepts related to state. In hard mode, we want to modify the **Game** component to be the source of the truth for the games state. The **Game** component should keep track of how the game is played and it's progress. Currently, most of this is tracked in our **Team** component. Our game component will manage 2 teams, home and visiting, and their stats during the game. To accomplish this we will be converting our **Team** component to a stateless functional component and having the stateful **Game** component pass the data to the teams as props. This is concept is called [Lifting State Up](https://reactjs.org/docs/lifting-state-up.html). We are sharing state with all the components concerned by moving it up to the closest common ancestor of the components that rely on it.
 
 * Convert the **Team** component to a functional stateless component. 
-    * Everything that relied on state before inside the **Team** component should now rely on props.
-* Update the **Game** component to keep track of the individual team stats and pass that data to the **Team** component as props.
-    * The **Game** component should keep track of both teams number of shots as well as their score. This data should be passed to the individual team components as props
+    * Everything that relied on state before inside the **Team** component should now rely on passed in props from the **Game** component.
+* Update the **Game** component to keep track of the home and visiting team stats and pass that data to the **Team** component as props.
 * Since all the game data will be tracked by the **Game** components state, the method used when clicking the shoot button for a team should also be passed in as a prop. This method needs to affect state in the right component.
 * Add a **Reset Game** button to the **Game** and a counter displaying the number of resets.
-    * When the reset button is pressed the team stats should reset and the reset counter should increase
+    * When the reset button is pressed the team stats should reset and the reset counter should increase by 1
 
 ## Extra Credit
 Create a Scoreboard component that displays the HOME and VISITING team scores.
