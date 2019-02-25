@@ -6,11 +6,11 @@ To get started you need to get everything set up so we are able to run our React
 ## Setup
 * Setup and HTML page that will present our application to our users.
 * Setup a default component for our App that ```ReactDOM.render()``` renders to our HTML page. This can be a stateless component
-    * **App** is a common name used for this default component. Lot's of components can make up our Application but we render this component to display application.
+    * **App** is a common name used for this default component. Many components can make up our **App** but we render this default component component to display the entire application.
     * ```ReactDOM.render()``` should only ever render this component.
     * All other components will render through this component either referenced directly in this component or as children of components referenced directly in this component.
 
-> The code in this repo, index.html, and reactApp.js represent the lab up to this point. You are welcome to use this code as a starter or for reference to help you get going.
+> The code in this repo, index.html and reactApp.js represent the lab up to this point. You're welcome to use this code as a starter or for reference to help you get going.
 
 ## Normal Mode
 Let's start building our application
