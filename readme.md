@@ -31,8 +31,8 @@ Usually, in a sports game, we want our favorite Team to win. In order to play th
 ### Setup our battle of the sports teams
 Now that we have a Default component that represents our Application being rendered to the screen and we have created and tested our **Team** component, we can start assembling our game.
 
-* Update the default App component you created to display 2 teams.
-* Use your knowledge of HTML and CSS to make the page look like more like a game where two teams are facing off in competition
+* Update the default App component you created to display 2 teams, the home team and the visiting team.
+* Use your knowledge of HTML and CSS to make the page look like more like a game where two teams, home and visiting, are facing off in competition
 * Verify both teams are displayed and keep track of their stats independently
 
 ## Medium Mode
@@ -62,3 +62,7 @@ Hard mode is not required and is to challenge you on concepts related to state. 
 * Since all the game data will be tracked by the **Game** components state, the method used when clicking the shoot button for a team should also be passed in as a prop. This method needs to affect state in the right component.
 * Add a **Reset Game** button to the **Game** and a counter displaying the number of resets.
     * When the reset button is pressed the team stats should reset and the reset counter should increase
+
+
+## Extra Credit
+Create a Scoreboard component that displays the HOME and Visting team scores.
