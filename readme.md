@@ -13,7 +13,7 @@ To get started you need to get everything set up so we are able to run our React
 > The code in this repo, index.html and reactApp.js represent the lab up to this point. You're welcome to use this code as a starter or for reference to help you get going.
 
 ## Normal Mode
-Let's start building our application
+Let's start building our game
 
 ### The Team Component
 Usually, in a sports game, we want our favorite Team to win. In order to play this game, you are going to need to create teams so they can compete for the win. Below is an outline of the functionality our team component should include.
