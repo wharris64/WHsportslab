@@ -63,6 +63,5 @@ Hard mode is not required and is to challenge you on concepts related to state. 
 * Add a **Reset Game** button to the **Game** and a counter displaying the number of resets.
     * When the reset button is pressed the team stats should reset and the reset counter should increase
 
-
 ## Extra Credit
-Create a Scoreboard component that displays the HOME and Visting team scores.
+Create a Scoreboard component that displays the HOME and VISITING team scores.
