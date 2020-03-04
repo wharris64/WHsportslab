@@ -64,3 +64,8 @@ Hard mode is not required and is to challenge you on concepts related to state. 
 
 ## Extra Credit
 Create a Scoreboard component that displays the HOME and VISITING team scores.
+
+
+
+to run server: serve -s .
+port: localhost:5000
